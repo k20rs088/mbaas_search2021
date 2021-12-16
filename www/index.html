@@ -13,7 +13,7 @@
     // NCMB アクセスの準備
     let ncmb = new NCMB(appKey, clientKey);
     // 本アプリで使うクラスの指定。const は定数の宣言。変更できない変数と思えば良い。
-    const db = "m";
+    const db = "Users";
 
     function fetchAll() {
       let TestDataClass = ncmb.DataStore(db);
@@ -61,7 +61,7 @@
 
     function showResults(results) {
       // テーブルのヘッダを生成
-      let msg = "<table><tr><th>name</th><th>Lvl</th><th>attack</th><th>defence</th></tr>";
+      let msg = "<table><tr><th>name</th><th>rank</th><th>score</th><th>Specialty goods</th></tr>";
       for (let i = 0; i < results.length; i++) {
         // 各データを収めた表の列を生成
         msg += "<tr>";
@@ -79,14 +79,14 @@
 </head>
 
 <body>
-  <h1>mBaaS search</h1>
+  <h1>47都道府県魅力度ランキング</h1>
   <div>
     <label for="name">name:</label>
-    <input id="name" type="text" placeholder="monster name">
+    <input id="name" type="text" placeholder="Prefectures">
   </div>
   <div>
     <label for="level">level:</label>
-    <input id="level" type="number" placeholder="monster level">
+    <input id="level" type="number" placeholder="Special product ranking">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
