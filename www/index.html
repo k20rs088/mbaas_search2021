@@ -66,9 +66,9 @@
         // 各データを収めた表の列を生成
         msg += "<tr>";
         msg += "<td>" + results[i].name + "</td>";
-        msg += "<td class='num'>" + results[i].level + "</td>";
-        msg += "<td class='num'>" + results[i].attack + "</td>";
-        msg += "<td class='num'>" + results[i].defence + "</td>";
+        msg += "<td class='num'>" + results[i].rank + "</td>";
+        msg += "<td class='num'>" + results[i].score + "</td>";
+        msg += "<td class='num'>" + results[i].goods + "</td>";
         msg += "</tr>";
       }
       // テーブルのテイラを生成
@@ -79,7 +79,7 @@
 </head>
 
 <body>
-  <h1>47都道府県魅力度ランキング</h1>
+  <h1>47都道府県<br>魅力度ランキング</h1>
   <div>
     <label for="name">name:</label>
     <input id="name" type="text" placeholder="Prefectures">
@@ -91,9 +91,9 @@
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
     <button class="btn" onclick="searchName()">Name</button><br>
-    <button class="btn" onclick="searchLevelLT()">Level &lt</button>
-    <button class="btn" onclick="searchLevel()">Level</button>
-    <button class="btn" onclick="searchLevelGT()">Level &gt</button>
+    <button class="btn" onclick="searchLevelLT()">Rank &lt</button>
+    <button class="btn" onclick="searchLevel()">Rank</button>
+    <button class="btn" onclick="searchLevelGT()">Rank &gt</button>
   </div>
   <div id="message">message area</div>
 </body>
