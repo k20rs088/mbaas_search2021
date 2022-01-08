@@ -34,8 +34,8 @@
 
     function searchLevel() {
       let TestDataClass = ncmb.DataStore(db);
-      let level = parseInt($("#level").val());
-      TestDataClass.equalTo("level", level).fetchAll()
+      let level = parseInt($("#rank").val());
+      TestDataClass.equalTo("rank", level).fetchAll()
         .then(function(results) {
           showResults(results);
         })
@@ -43,8 +43,8 @@
 
     function searchLevelLT() {
       let TestDataClass = ncmb.DataStore(db);
-      let level = parseInt($("#level").val());
-      TestDataClass.lessThan("level", level).fetchAll()
+      let level = parseInt($("#rank").val());
+      TestDataClass.lessThan("rank", level).fetchAll()
         .then(function(results) {
           showResults(results);
         })
@@ -52,8 +52,8 @@
 
     function searchLevelGT() {
       let TestDataClass = ncmb.DataStore(db);
-      let level = parseInt($("#level").val());
-      TestDataClass.greaterThan("level", level).fetchAll()
+      let level = parseInt($("#rank").val());
+      TestDataClass.greaterThan("rank", level).fetchAll()
         .then(function(results) {
           showResults(results);
         })
@@ -85,8 +85,8 @@
     <input id="name" type="text" placeholder="Prefectures">
   </div>
   <div>
-    <label for="level">level:</label>
-    <input id="level" type="number" placeholder="Special product ranking">
+    <label for="rank">rank:</label>
+    <input id="rank" type="number" placeholder="Special product ranking">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
